@@ -1,0 +1,16 @@
+def login():
+    username="admin_user"
+    password="admin123"
+    correct_attempt=3
+    for i in range(3):
+        u=input("Enter your username:")
+        p=input("\nEnter your password:")
+        if u==username and p==password:
+            print("\nLogin confirmed")
+            break
+        else:
+            correct_attempt-=1
+            print("\nIncorrect username or password.",correct_attempt,"attempt remaining\n")
+        if correct_attempt==0:
+           print("\nForgot your password or your username?\n")  
+login()        
