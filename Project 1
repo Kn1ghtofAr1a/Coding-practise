@@ -1,0 +1,20 @@
+ Knights=["arthur","galahad","lancelot","gawain","percival","bors","kay","bedivere"]
+Weapons=[w.lower()for w in["sword","claymore","bow","spear","scrolls"]]
+Elements=[e.lower() for e in["cryo","hydro","pyro","geo","anemo","electro"]]
+def choose_a_weapon(name,weapon,element):
+    print(f"\nHonorary Knight,Sir {name.title()},You have chosen {weapon.title()} as a weapon with {element.title()} as an element.")
+name=input("Enter your name,O brave knight:").lower()
+if name not in Knights:
+    print("\nYou are not a knight from Round table.")
+    quit()
+while True:
+    weapon=input("\nChoose your weapon:").lower()
+    if weapon in Weapons:
+        break
+    print("\nImaginary weapons aren't allowed.")
+while True:
+    element=input("\nChoose your element:").lower()
+    if element in Elements:
+        break
+    print("\nCreate your own element in your own free time.")
+choose_a_weapon(name,weapon,element)
